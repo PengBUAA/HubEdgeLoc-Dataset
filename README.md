@@ -13,8 +13,8 @@ Unlike traditional static datasets, HubEdgeLoc focuses on the temporal dynamics 
 * **Longitudinal Span:** Features continuous data collection spanning **5 months** in a large-scale transportation hub and **2 months** in an academic building.
 * **Dual Scenarios:**
   * ✈️ **Airport Terminal:** Highly complex, dynamic environment covering over 10,000 square meters. First open-source airport WIFI dataset (Guiyang Longdongpu International Airport).
-  * 🏫 **University Campus:** Structured, moderately dynamic indoor space (BUAA Campus).
-* **Edge-Oriented:** Focused on lightweight RSS fingerprints, ideal for deploying state-space models (e.g., Mamba) and TinyML algorithms on resource-constrained microcontrollers.
+  * 🏫 **University Campus:** Structured, moderately dynamic indoor space .
+* **Edge-Oriented:** Focused on lightweight RSS fingerprints, ideal for deploying TinyML algorithms on resource-constrained microcontrollers.
 
 ## 📂 Directory Structure
 
