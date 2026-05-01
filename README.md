@@ -25,13 +25,17 @@ HubEdgeLoc-Dataset/
 ├── README.md
 ├── data/
 │   ├── Airport/
-│   │   ├── Month_1/
+│   │   ├── Fingerprint Database/  # For Train
+│   │   │   ├── rss_data.csv       # Wi-Fi RSS fingerprints
+│   │   │   └── labels.csv         # Ground truth coordinates (x, y)
+│   │   ├── Month_1/               # For Validate and Test
 │   │   │   ├── rss_data.csv       # Wi-Fi RSS fingerprints
 │   │   │   └── labels.csv         # Ground truth coordinates (x, y)
 │   │   ├── Month_2/
 │   │   ├── ...
 │   │   └── Month_5/
 │   └── Campus/
+│       ├── Fingerprint Database/
 │       ├── Month_1/
 │       └── Month_2/
 └── 
