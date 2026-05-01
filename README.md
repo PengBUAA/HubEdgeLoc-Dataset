@@ -16,26 +16,25 @@ Unlike traditional static datasets, HubEdgeLoc focuses on the temporal dynamics 
   * 🏫 **University Campus:** Structured, moderately dynamic indoor space .
 * **Edge-Oriented:** Focused on lightweight RSS fingerprints, ideal for deploying TinyML algorithms on resource-constrained microcontrollers.
 
-## 📂 Directory Structure
+## 📂 Dataset Structure & Description
 
-The dataset is organized by scenario and then by data collection month to facilitate temporal evaluation.
+The dataset is organized into two primary scenarios: **Airport** (Large-scale, dynamic) and **Campus** (Structured, moderate). Each scenario folder contains a reference Fingerprint Database and multiple Evaluation Sets collected over time.
 
-```text
-HubEdgeLoc-Dataset/
-├── README.md
-├── data/
-│   ├── Airport/
-│   │   ├── Fingerprint Database/  # For Train
-│   │   │   ├── rss_data.csv       # Wi-Fi RSS fingerprints
-│   │   │   └── labels.csv         # Ground truth coordinates (x, y)
-│   │   ├── Month_1/               # For Validate and Test
-│   │   │   ├── rss_data.csv       # Wi-Fi RSS fingerprints
-│   │   │   └── labels.csv         # Ground truth coordinates (x, y)
-│   │   ├── Month_2/
-│   │   ├── ...
-│   │   └── Month_5/
-│   └── Campus/
-│       ├── Fingerprint Database/
-│       ├── Month_1/
-│       └── Month_2/
-└── 
+### 📁 `Airport/` and 📁 `Campus/`
+Inside each scenario directory, the data hierarchy is categorized as follows:
+
+#### 1. `Fingerprint_Database/` (Reference Data)
+This directory contains the training data used to construct the radio map. We provide three versions of the data to facilitate benchmarking of different preprocessing techniques:
+
+* 📄 **`OriginData/`**: The raw, unprocessed Wi-Fi RSS fingerprints as captured by the edge devices.
+* 📄 **`After_Traditional_Process/`**: RSS data processed using standard filtering methods (e.g., Gaussian filtering or Mean filtering) to mitigate multipath effects and noise.
+* 📄 **`After_Score_Process/`**: Data processed via our proposed **Score Mechanism**. This version optimizes the fingerprints by evaluating signal stability and AP importance, specifically designed to improve localization robustness in dynamic environments.
+
+#### 2. Temporal Evaluation Sets (Test Data)
+These directories are used to evaluate the model's performance and its ability to handle temporal drift:
+
+* 📄 **`Init/`**: Data collected immediately after the completion of the Fingerprint Database. Represents the "best-case" scenario with minimal environmental change.
+* 📄 **`Month_1/` to `Month_X/`**: Longitudinal data collected periodically. 
+    * The **Airport** scenario includes 5 months of data (`Month_1` to `Month_5`).
+    * The **Campus** scenario includes 2 months of data (`Month_1` to `Month_2`).
+    * *Purpose:* These sets allow researchers to test how localization accuracy degrades over time and how well models (like our HubEdgeLoc) adapt to long-term signal fluctuations.
