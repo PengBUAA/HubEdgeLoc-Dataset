@@ -2,7 +2,7 @@
 
 [![Paper](https://img.shields.io/badge/Paper-IMWUT-blue.svg)](#) 
 
-This repository contains the official dataset for the IMWUT paper: **"[Your Paper Title Here]"**. 
+This repository contains the official dataset for the IMWUT paper: **"[HubEdgeLoc: Edge-Based Temporally Robust Real-Time Localization for Mobile Assets in Transport Hubs]"**. 
 
 HubEdgeLoc provides a large-scale, **longitudinal Wi-Fi Received Signal Strength (RSS)** dataset specifically collected to evaluate the long-term robustness and generalization of lightweight indoor localization models on edge devices.
 
@@ -15,6 +15,15 @@ Unlike traditional static datasets, HubEdgeLoc focuses on the temporal dynamics 
   * ✈️ **Airport Terminal:** Highly complex, dynamic environment covering over 10,000 square meters. First open-source airport WIFI dataset (Guiyang Longdongpu International Airport).
   * 🏫 **University Campus:** Structured, moderately dynamic indoor space .
 * **Edge-Oriented:** Focused on lightweight RSS fingerprints, ideal for deploying TinyML algorithms on resource-constrained microcontrollers.
+
+## 📥 Download
+
+Due to file size limitations, the complete database is split into two volumes. Please download **both** files and place them in the same directory before extracting to ensure data integrity.
+
+* **Files:** `Dataset.zip` and `Dataset.z01`
+* **Action:** Download both files and unzip `Dataset.zip` to obtain the full dataset.
+
+---
 
 ## 📂 Dataset Structure & Description
 
