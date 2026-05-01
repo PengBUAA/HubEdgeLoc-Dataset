@@ -34,7 +34,4 @@ HubEdgeLoc-Dataset/
 │   └── Campus/
 │       ├── Month_1/
 │       └── Month_2/
-├── scripts/
-│   ├── temporal_dataloader.py     # Script to load data across time windows
-│   └── evaluate_drift.py          # Example script for testing model robustness over time
-└── AP_mac_mapping.json            # Anonymized MAC address to index mapping
+└── 
