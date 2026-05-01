@@ -1,9 +1,5 @@
-# HubEdgeLoc-Dataset
-Official dataset for "HubEdgeLoc" . A large-scale, longitudinal Wi-Fi RSS indoor localization dataset spanning 5 months in an airport and 2 months on a university campus, designed for evaluating Edge AI robustness.
-
 # HubEdgeLoc Dataset 📍📶
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Paper](https://img.shields.io/badge/Paper-IMWUT-blue.svg)](#) 
 
 This repository contains the official dataset for the IMWUT paper: **"[Your Paper Title Here]"**. 
@@ -15,7 +11,7 @@ HubEdgeLoc provides a large-scale, **longitudinal Wi-Fi Received Signal Strength
 Unlike traditional static datasets, HubEdgeLoc focuses on the temporal dynamics of indoor environments (Concept Drift caused by environmental changes, human traffic, and AP fluctuations). 
 
 * **Longitudinal Span:** Features continuous data collection spanning **5 months** in a large-scale transportation hub and **2 months** in an academic building.
-* **Dual Scenarios:** * ✈️ **Airport Terminal:** Highly complex, dynamic environment covering over 10,000 square meters (Guiyang Longdongpu International Airport).
+* **Dual Scenarios:** * ✈️ **Airport Terminal:** Highly complex, dynamic environment covering over 10,000 square meters. First open-source airport WIFI dataset (Guiyang Longdongpu International Airport).
   * 🏫 **University Campus:** Structured, moderately dynamic indoor space (BUAA Campus).
 * **Edge-Oriented:** Focused on lightweight RSS fingerprints, ideal for deploying state-space models (e.g., Mamba) and TinyML algorithms on resource-constrained microcontrollers.
 
