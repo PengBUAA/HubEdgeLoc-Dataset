@@ -24,11 +24,11 @@ The dataset is organized into two primary scenarios: **Airport** (Large-scale, d
 Inside each scenario directory, the data hierarchy is categorized as follows:
 
 #### 1. `Fingerprint_Database/` (Reference Data)
-This directory contains the training data used to construct the radio map. We provide three versions of the data to facilitate benchmarking of different preprocessing techniques:
+This directory contains the training data used to construct the radio map. We provide three versions of the database to illustrate different storage formats and processing strategies:
 
 * 📄 **`OriginData/`**: The raw, unprocessed Wi-Fi RSS fingerprints as captured by the edge devices.
-* 📄 **`After_Traditional_Process/`**: RSS data processed using standard filtering methods (e.g., Gaussian filtering or Mean filtering) to mitigate multipath effects and noise.
-* 📄 **`After_Score_Process/`**: Data processed via our proposed **Score Mechanism**. This version optimizes the fingerprints by evaluating signal stability and AP importance, specifically designed to improve localization robustness in dynamic environments.
+* 📄 **`After_Traditional_Process/`**: A traditional database storage format where the Wi-Fi RSS fingerprints are sequentially arranged based on the order of Access Point (AP) appearance.
+* 📄 **`After_Score_Process/`**: The optimized database storage format where the fingerprints have been processed and reorganized according to our proposed **Score Mechanism** (which evaluates AP reliability and stability to improve robustness in dynamic environments).
 
 #### 2. Temporal Evaluation Sets (Test Data)
 These directories are used to evaluate the model's performance and its ability to handle temporal drift:
